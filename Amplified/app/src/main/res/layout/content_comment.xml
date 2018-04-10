@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191919"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.acer.amplified.activities.Comment"
+    tools:showIn="@layout/activity_comment">
+
+    <ImageView
+        android:id="@+id/imPicture2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@mipmap/songsimage" />
+
+    <EditText
+        android:id="@+id/etComment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF"
+        android:enabled="true"
+        android:hint="Leave a comment"
+        app:layout_anchor="@+id/imPicture2"
+        app:layout_anchorGravity="bottom|center" />
+
+    <Button
+        android:id="@+id/bSend"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Send"
+        app:layout_anchor="@+id/imPicture2"
+        app:layout_anchorGravity="right|bottom" />
+
+
+    <TextView
+        android:id="@+id/tvComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comments"
+        android:textColor="#FFFFFF" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#191919"
+        android:scrollbars="vertical"
+        android:visibility="visible" />
+
+</LinearLayout>
